@@ -1,4 +1,5 @@
 import React from 'react';
+import './navbar.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom'; //will use link instead of anchor tag for connecting it with router dom, it will go to link without reloading
 
 const Navbar = () => {
@@ -27,7 +28,7 @@ const Navbar = () => {
             <div className="collapse navbar-collapse mx-3" id="navbarSupportedContent">
                 <Link className={`nav-item nav-link mx-2 mb-1 mt-1 text-${location.pathname==="/"?"light":"muted"}`} to="/">Home</Link>
                 <Link className={`nav-item nav-link mx-2 mb-1 mt-1 text-${location.pathname==="/about"?"light":"muted"}`} to="/about">About</Link>
-                <div className="spacer" style={{width:"63vw"}}></div>
+                <div id="spacer"></div>
                 {/* using bootstrap buttons for login and signup part, using ternary opreator for checking if token present
                 in localstorage of browser if present then showing logout if not then showing login and signup*/}
                 { !localStorage.getItem("token") ?
