@@ -4,7 +4,7 @@ import React from 'react';  //imporing for using our context (useContext)
 const About = () => {
   return (
     <div>
-      about Page
+      <div><h1> about page in progress..... </h1></div>
     </div>
   )
 }
